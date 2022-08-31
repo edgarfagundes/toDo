@@ -19,7 +19,7 @@ export function Cadastro(){
     return (
         <form className={styles.form}>
             <textarea className={styles.textarea} placeholder="Adicione nova tarefa"></textarea>
-            <button className={styles.button} onSubmit={handleContent}> Criar</button>
+            <button className={styles.button} onClick={handleContent}> Criar</button>
         </form>
     )
 }
