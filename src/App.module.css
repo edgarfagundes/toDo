@@ -1,7 +1,12 @@
 .wrapper {
   position: relative;
-  width: 1440px;
-  height: 1024px;
+  width: 100rem;
+  height: 40rem;
   
   background: var(--gray-600);
   }
+
+  .body{
+    justify-content: center;
+  }
+  
