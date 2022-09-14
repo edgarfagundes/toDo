@@ -27,11 +27,11 @@ function App() {
       <div className={styles.header}>
       <Header />
       </div>
-      <body className={styles.body}>
+      <div className={styles.body}>
       <div className={styles.lista}>
       <Lista />
       </div>
-      </body>
+      </div>
     </div>
   );
 }

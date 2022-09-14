@@ -50,7 +50,7 @@ export default function Lista() {
       <div>
         {toDo.map((content) => {
           return (
-            <ToDo
+            <ToDo 
               key={content}
               content={content}
               onDeleteContent={deleteToDo}

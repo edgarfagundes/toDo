@@ -1,7 +1,51 @@
 .content {
-  margin-top: 10px;
-  margin-left: 30px;
+  margin-top: 50px;
+  margin-left: 35px;
+  width: 632px;
+  height: 40px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
   font-size: 14px;
+  line-height: 140%;
+  /* or 20px */
+  
+  /* Gray 300 */
+  
+  color: #808080;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
+.contentCheckboxChecked{
+  width: 632px;
+height: 40px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 140%;
+/* or 20px */
+
+text-decoration-line: line-through;
+
+/* Gray 300 */
+
+color: #808080;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 1;
 }
 
 .checkbox {
@@ -19,37 +63,15 @@
   margin-top: 7px;
 }
 
+
+
 .checkbox:checked {
-  /* PurpleDark */
 
   background: #5e60ce;
-  
+
 }
 
-.concluidas .checkbox:checked {
-    width: 632px;
-    height: 40px;
-    
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 140%;
-    /* or 20px */
-    
-    text-decoration-line: line-through;
-    
-    /* Gray 300 */
-    
-    color: #808080;
-    
-    
-    /* Inside auto layout */
-    
-    flex: none;
-    order: 1;
-    flex-grow: 1;
-}
+
 
 .tarefas-list {
   display: flex;
