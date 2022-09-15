@@ -3,8 +3,24 @@ import styles from "./Lista.module.css";
 import { ToDo } from "./ToDo";
 
 export default function Lista() {
-  const [toDo, setToDo] = useState([""]);
+  const [toDo, setToDo] = useState<string[]>([]);
   const [newTodo, setNewToDo] = useState("");
+  const [toDoCount, setToDoCount] = useState(0)
+
+
+  function deleteToDo(contentToDelete: string) { 
+    const contentsWithoutDeletedOne = toDo.filter((toDo) => {
+      setToDoCount(toDoCount - 1)
+      return toDo !== contentToDelete;
+    });
+
+    setToDo(contentsWithoutDeletedOne);
+  }
+
+  function handleToDoContent(){
+    setToDoCount(toDoCount + 1)
+  }
+  
 
   function handleContent(event: FormEvent) {
     event.preventDefault();
@@ -20,10 +36,11 @@ export default function Lista() {
   function handleNewContentInvalid(event: InvalidEvent<HTMLInputElement>) {
     event.target.setCustomValidity("Esse campo é obrigatório!");
   }
+  
 
   const isNewTodoEmpty = newTodo.length === 0;
 
-  function deleteToDo() {}
+  
 
   return (
     <form className={styles.form} onSubmit={handleContent}>
@@ -42,10 +59,14 @@ export default function Lista() {
           type="submit"
           className={styles.button}
           disabled={isNewTodoEmpty}
+          onClick={handleToDoContent}
         >
           Criar
         </button>
         </div>
+      </div>
+      <div className={styles.criadas}>
+      <span >Tarefas criadas: {toDoCount}</span>
       </div>
       <div>
         {toDo.map((content) => {

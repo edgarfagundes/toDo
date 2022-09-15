@@ -3,49 +3,54 @@
   margin-left: 35px;
   width: 632px;
   height: 40px;
-  
-  font-family: 'Inter';
+
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
   /* or 20px */
-  
+
   /* Gray 300 */
-  
-  color: #808080;
-  
-  
+
+  color: var(--gray-300);
+
   /* Inside auto layout */
-  
+
   flex: none;
   order: 1;
   flex-grow: 1;
 }
 
-.contentCheckboxChecked{
+.contentCheckboxChecked {
+  margin-top: 10px;
+  margin-left: 35px;
   width: 632px;
-height: 40px;
+  height: 40px;
 
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 140%;
-/* or 20px */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  /* or 20px */
 
-text-decoration-line: line-through;
+  text-decoration-line: line-through;
 
-/* Gray 300 */
+  /* Gray 300 */
 
-color: #808080;
+  color: var(--gray-300);
 
+  /* Inside auto layout */
 
-/* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
 
-flex: none;
-order: 1;
-flex-grow: 1;
+.commentList {
+  display: flex;
+  flex-direction: row;
 }
 
 .checkbox {
@@ -60,18 +65,28 @@ flex-grow: 1;
   -webkit-appearance: none;
   outline: none;
   cursor: pointer;
-  margin-top: 7px;
 }
-
-
 
 .checkbox:checked {
-
   background: #5e60ce;
-
 }
 
+.trash {
+  background-color: var(--gray-500);
+  color: var(--gray-300);
+  border: none;
 
+  width: 24px;
+  height: 24px;
+
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
 
 .tarefas-list {
   display: flex;
@@ -89,12 +104,12 @@ flex-grow: 1;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.tarefas{
+.tarefas {
   box-sizing: border-box;
 
   display: flex;
   flex-direction: row;
-  align-items: flex;
+  align-items: center;
   padding: 16px;
   gap: 12px;
 
@@ -113,7 +128,6 @@ flex-grow: 1;
   flex-grow: 0;
 
   margin: 10px;
-
 }
 
 .criadas {
