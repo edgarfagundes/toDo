@@ -5,7 +5,7 @@ import { ToDo } from "./ToDo";
 export default function Lista() {
   const [toDo, setToDo] = useState<string[]>([]);
   const [newTodo, setNewToDo] = useState("");
-  const [toDoCount, setToDoCount] = useState(0)
+  const [toDoCount, setToDoCount] = useState(toDo.length)
 
 
   function deleteToDo(contentToDelete: string) { 
