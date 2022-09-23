@@ -1,21 +1,41 @@
 import styles from "./ToDo.module.css";
-import { useState } from 'react';
-import { ThumbsUp, Trash } from "phosphor-react";
+import { useState } from "react";
+import { Trash } from "phosphor-react";
 
-interface ToDoProps {
+export type ToDo = {
+  id: number;
   content: string;
-  onDeleteContent: (content: string) => void;
+  checked: boolean;
+};
+interface ToDoProps {
+  toDo: ToDo;
+  onDeleteContent: (id: number) => void;
+  onChecked: (checked: boolean) => void
+
 }
 
-export function ToDo({ content, onDeleteContent }: ToDoProps) {
-
+export function ToDo({toDo, onDeleteContent, onChecked }: ToDoProps) {
   const [isChecked, setIsChecked] = useState(false);
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked);
+   if(!isChecked){
+    toDo.checked = true;
+    console.log(toDo.checked);
+   }else{
+    toDo.checked = false;
+    console.log(toDo.checked)
+   }
+   handleChecked();
+   return toDo.checked;
   };
 
+
   function handleDeleteComment() {
-    onDeleteContent(content);
+    onDeleteContent(toDo.id);
+  }
+
+  function handleChecked(){
+    onChecked(toDo.checked)
   }
 
   return (
@@ -29,11 +49,23 @@ export function ToDo({ content, onDeleteContent }: ToDoProps) {
             onChange={handleChange}
           />
           <div>
-            <text  className={isChecked ? styles.contentCheckboxChecked : styles.content}>{content}</text>
+            <text
+              className={
+                isChecked ? styles.contentCheckboxChecked : styles.content
+              }
+            >
+              {toDo.content}
+            </text>
           </div>
-          <button className={styles.trash} onClick={handleDeleteComment} title="Deletar comentário">
+          <div>
+            <button
+              className={styles.trash}
+              onClick={handleDeleteComment}
+              title="Deletar comentário"
+            >
               <Trash size={24} />
             </button>
+          </div>
         </div>
       </div>
     </div>

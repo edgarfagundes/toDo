@@ -1,32 +1,32 @@
 .content {
-  margin-top: 50px;
-  margin-left: 35px;
+
   width: 632px;
   height: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  max-width: 736px;
+  align-items: center;
 
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
-  /* or 20px */
-
-  /* Gray 300 */
 
   color: var(--gray-300);
 
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 1;
 }
 
 .contentCheckboxChecked {
-  margin-top: 10px;
-  margin-left: 35px;
+
   width: 632px;
   height: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  max-width: 736px;
+  align-items: center;
 
   font-family: "Inter";
   font-style: normal;
@@ -51,41 +51,39 @@
 .commentList {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .checkbox {
-  position: absolute;
+
   width: 1.3em;
   height: 1.3em;
   background-color: var(--gray-500);
   border-radius: 50%;
   vertical-align: middle;
   border: 1px solid var(--blue-500);
+
   appearance: none;
+
   -webkit-appearance: none;
   outline: none;
   cursor: pointer;
+  margin: 10px;
 }
 
 .checkbox:checked {
   background: #5e60ce;
+  margin: 10px;
 }
 
 .trash {
   background-color: var(--gray-500);
   color: var(--gray-300);
   border: none;
-
   width: 24px;
   height: 24px;
 
   border-radius: 4px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 2;
-  flex-grow: 0;
 }
 
 .tarefas-list {
@@ -106,12 +104,12 @@
 
 .tarefas {
   box-sizing: border-box;
-
+  justify-content:flex-start;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  padding: 16px;
-  gap: 12px;
+  gap: 0.75rem;
+  
+  margin: 10px 0 0 0;
 
   width: 736px;
   height: 72px;
@@ -121,13 +119,6 @@
   border: 1px solid #333333;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
   border-radius: 8px;
-
-  flex: none;
-  order: 2;
-  align-self: stretch;
-  flex-grow: 0;
-
-  margin: 10px;
 }
 
 .criadas {

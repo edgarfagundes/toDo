@@ -4,6 +4,9 @@
   left: 0px;
   right: 0px;
   top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   background: var(--gray-700);
 }
